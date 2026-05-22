@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Seen on Upwork in 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --espresso:     #1A0F06;
+  --espresso-2:   #2C1A0A;
+  --copper:       #B8722A;
+  --copper-light: #F7EDD8;
+  --copper-mid:   #E0C08A;
+  --copper-warm:  #D4913A;
+  --paper:        #F4EDE0;
+  --paper-2:      #EDE4D2;
+  --paper-3:      #E6DBCA;
+  --warm-white:   #FBF7F0;
+  --text:         #1E1007;
+  --text-mid:     #5C3E22;
+  --text-light:   #9E7B52;
+  --border:       #D6C9B0;
+  --border-light: #E8DFD0;
+  --font-serif:   'Lora', Georgia, serif;
+  --font-sans:    'Inter', system-ui, sans-serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.055'/%3E%3C/svg%3E");
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #C0B09A; font-family: var(--font-sans); padding: 48px 16px 120px; }
+
+/* ── BOOK WRAPPER ── */
+.book {
+  max-width: 820px;
+  margin: 0 auto;
+  box-shadow: 0 8px 80px rgba(0,0,0,0.28);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── PROGRESS BAR ── */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: var(--copper);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.08s linear;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 6px rgba(184,114,42,0.5);
+}
+
+/* ── CHAPTER SEPARATOR ── */
+.chap-sep {
+  height: 36px;
+  background: #B8A898;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+/* ── SECTION BASE ── */
+.s {
+  padding: 60px 68px;
+  background-color: var(--paper);
+  background-image: var(--grain);
+  background-size: 300px 300px;
+  border-bottom: 1px solid var(--border-light);
+}
+.s.alt  { background-color: var(--warm-white); }
+.s.sand { background-color: var(--paper-3); }
+
+/* ── CHAPTER OPENERS ── */
+.chap {
+  padding: 72px 68px 64px;
+  background-color: var(--espresso);
+  background-image: var(--grain);
+  background-size: 300px 300px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--copper);
+}
+.chap-ghost {
+  font-family: var(--font-sans);
+  font-size: 170pt;
+  font-weight: 900;
+  color: rgba(255,255,255,0.03);
+  position: absolute;
+  right: 24px; top: 8px;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  letter-spacing: -0.05em;
+}
+.chap-label { font-size: 8pt; font-weight: 800; color: var(--copper); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 6mm; }
+.chap-rule  { width: 100%; height: 1px; background: rgba(255,255,255,0.08); margin-bottom: 12mm; }
+.chap-title { font-family: var(--font-sans); font-size: 36pt; font-weight: 900; color: var(--warm-white); line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 9mm; max-width: 640px; }
+.chap-desc  { font-size: 11.5pt; color: rgba(255,255,255,0.52); line-height: 1.85; max-width: 580px; }
+
+/* ── COVER ── */
+.cover {
+  padding: 0;
+  background-color: var(--espresso);
+  background-image: var(--grain);
+  background-size: 300px 300px;
+  border-bottom: none;
+}
+.cover-band   { background: var(--copper); height: 3px; width: 100%; }
+.cover-top    { padding: 14mm 60px 0; display: flex; justify-content: space-between; align-items: center; }
+.cover-logo   { font-size: 8pt; font-weight: 700; color: rgba(255,255,255,0.3); letter-spacing: 0.14em; text-transform: uppercase; }
+.cover-yr     { font-size: 8pt; font-weight: 600; color: rgba(255,255,255,0.22); letter-spacing: 0.1em; }
+.cover-body   { padding: 14mm 60px 10mm; }
+.cover-eye    { font-size: 7.5pt; font-weight: 800; color: var(--copper); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 6mm; }
+.cover-title  { font-family: var(--font-sans); font-size: 52pt; font-weight: 900; color: var(--warm-white); line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 8mm; }
+.cover-title em { color: var(--copper); font-style: normal; }
+.cover-rule   { width: 16mm; height: 2px; background: var(--copper); margin-bottom: 7mm; }
+.cover-sub    { font-size: 12pt; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 500px; margin-bottom: 9mm; }
+.cover-author { font-size: 9.5pt; color: rgba(255,255,255,0.3); font-weight: 600; letter-spacing: 0.04em; }
+.cover-img    { margin: 0 60px 0; border-radius: 10px; overflow: hidden; border: 1.5px solid rgba(255,255,255,0.08); box-shadow: 0 4px 28px rgba(0,0,0,0.35); }
+.cover-ft     { padding: 7mm 60px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; margin-top: 10mm; }
+.cover-tag    { background: rgba(184,114,42,0.2); color: var(--copper); font-size: 7.5pt; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid rgba(184,114,42,0.35); }
+
+/* ── TYPOGRAPHY ── */
+/* H1 = chapter title (.chap-title): 36pt  */
+/* H2 = section heading:              28pt  */
+/* H3 = sub-section heading:          19pt  */
+/* H4 = list item / card title:       13pt  */
+/* Body:                               12pt  */
+.sec-label { font-family: var(--font-sans); font-size: 8pt; font-weight: 800; color: var(--copper); text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 4mm; display: block; }
+h2 { font-family: var(--font-sans); font-size: 28pt; font-weight: 900; color: var(--espresso); line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 8mm; margin-top: 2mm; }
+h3 { font-family: var(--font-sans); font-size: 19pt; font-weight: 800; color: var(--copper-warm); margin-top: 12mm; margin-bottom: 6mm; line-height: 1.25; letter-spacing: -0.01em; }
+h4 { font-family: var(--font-sans); font-size: 13pt; font-weight: 700; color: var(--espresso); margin-bottom: 3mm; line-height: 1.35; }
+p  { font-size: 12pt; color: var(--text); line-height: 1.88; margin-bottom: 6mm; font-family: var(--font-sans); }
+p:last-child { margin-bottom: 0; }
+em { font-style: italic; color: var(--espresso-2); }
+strong { font-weight: 700; color: var(--espresso); }
+.divider { width: 100%; height: 1px; background: var(--border-light); margin: 8mm 0; }
+.divider-label { display: flex; align-items: center; gap: 4mm; margin: 9mm 0; }
+.divider-label span { font-size: 8pt; font-weight: 800; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.14em; white-space: nowrap; }
+.divider-label::before, .divider-label::after { content: ''; flex: 1; height: 1px; background: var(--border-light); }
+
+/* ── CALLOUTS ── */
+.callout      { background: var(--copper-light); border-left: 3.5px solid var(--copper); padding: 5mm 6.5mm; border-radius: 0 8px 8px 0; margin: 5mm 0; }
+.callout-label{ font-family: var(--font-sans); font-size: 8pt; font-weight: 800; color: var(--copper); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 3mm; }
+.callout p    { font-size: 11pt; color: #5C3010; line-height: 1.75; margin-bottom: 0; }
+.callout-dark { background: var(--espresso-2); border-left: 3.5px solid var(--copper); padding: 6mm 7mm; border-radius: 0 8px 8px 0; margin: 6mm 0; }
+.callout-dark .callout-label { color: var(--copper); }
+.callout-dark p { font-size: 11pt; color: rgba(251,247,240,0.82); line-height: 1.75; margin-bottom: 0; }
+.callout-dark strong { color: var(--warm-white); font-weight: 700; }
+.callout-dark em { color: rgba(251,247,240,0.88); font-style: italic; }
+.chap em { color: rgba(251,247,240,0.75); font-style: italic; }
+.callout-sand { background: var(--paper-3); border: 1px solid var(--border); border-left: 3.5px solid var(--copper); padding: 6mm 7mm; border-radius: 0 8px 8px 0; margin: 6mm 0; }
+.callout-sand .callout-label { color: var(--copper-warm); }
+.callout-sand p { font-size: 11pt; color: var(--text); line-height: 1.75; margin-bottom: 0; }
+
+/* ── STAT BOXES ── */
+.stat-row { display: flex; gap: 4mm; margin: 5mm 0; }
+.stat-box { flex: 1; background: var(--paper-3); border: 1px solid var(--border); border-radius: 8px; padding: 5mm; text-align: center; }
+.stat-num  { font-family: var(--font-sans); font-size: 22pt; font-weight: 900; color: var(--copper); line-height: 1; margin-bottom: 2mm; }
+.stat-lbl  { font-size: 8pt; color: var(--text-mid); line-height: 1.45; font-weight: 500; }
+.big-stat  { font-family: var(--font-sans); font-size: 32pt; font-weight: 900; color: var(--copper); line-height: 1; margin-bottom: 2mm; }
+
+/* ── LISTS ── */
+ul.doc-list { list-style: none; padding: 0; margin: 3mm 0 4mm 0; }
+ul.doc-list li { font-size: 11pt; color: var(--text); line-height: 1.75; padding: 3mm 0 3mm 8mm; position: relative; border-bottom: 1px solid var(--border-light); }
+ul.doc-list li:last-child { border-bottom: none; }
+ul.doc-list li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 5px; height: 5px; border-radius: 50%; background: var(--copper); }
+
+/* ── SCREENSHOTS ── */
+.screenshot-block { margin: 7mm 0 4mm; }
+.screenshot-block img { width: 100%; height: auto; border-radius: 8px; border: 1.5px solid var(--border); display: block; box-shadow: 0 2px 16px rgba(0,0,0,0.12); }
+.img-caption { font-size: 9.5pt; color: var(--text-light); font-style: italic; text-align: center; margin-top: 3mm; line-height: 1.55; padding: 0 3mm; }
+.img-caption strong { font-style: normal; color: var(--text-mid); font-weight: 600; }
+
+/* ── TWO-COL ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5mm; margin: 4mm 0; }
+
+/* ── DISCOVERY / DISC CARDS ── */
+.disc-card { display: flex; gap: 5mm; padding: 4mm 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+.disc-card:last-child { border-bottom: none; }
+.disc-num  { font-family: var(--font-sans); font-size: 17pt; font-weight: 900; color: var(--copper); min-width: 11mm; line-height: 1; padding-top: 0.5mm; }
+.disc-content h4 { margin-bottom: 2mm; }
+.disc-content p  { font-size: 11pt; color: var(--text-mid); line-height: 1.7; margin: 0; }
+
+/* ── TABLES ── */
+.doc-table { width: 100%; border-collapse: collapse; margin: 5mm 0; font-size: 10.5pt; border-radius: 8px; overflow: hidden; }
+.doc-table th { background: var(--espresso); color: var(--warm-white); font-family: var(--font-sans); font-size: 9pt; font-weight: 700; padding: 3.5mm 5mm; text-align: left; letter-spacing: 0.04em; }
+.doc-table td { padding: 3.5mm 5mm; border-bottom: 1px solid var(--border-light); color: var(--text); vertical-align: top; line-height: 1.65; }
+.doc-table tr:last-child td { border-bottom: none; }
+.doc-table tr:nth-child(even) td { background: var(--paper-2); }
+.score-pos  { color: var(--copper); font-weight: 900; font-size: 11pt; white-space: nowrap; }
+.score-neg  { color: #B03020; font-weight: 900; font-size: 11pt; white-space: nowrap; }
+.score-total-row td { background: var(--espresso) !important; color: var(--warm-white) !important; font-weight: 800; border-bottom: none !important; }
+.score-total-row .score-pos { color: var(--copper-mid) !important; }
+
+/* ── RULE ROWS ── */
+.rule-row { display: flex; gap: 5mm; padding: 4mm 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+.rule-row:last-child { border-bottom: none; }
+.rule-num  { font-family: var(--font-sans); font-size: 15pt; font-weight: 900; color: var(--copper-mid); min-width: 10mm; line-height: 1; padding-top: 1mm; }
+.rule-content h4 { margin-bottom: 3mm; }
+.rule-content p  { font-size: 11pt; color: var(--text); line-height: 1.7; margin: 0; }
+
+/* ── DAY ROWS ── */
+.day-row { display: flex; gap: 5mm; padding: 4mm 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+.day-row:last-child { border-bottom: none; }
+.day-badge { background: var(--espresso); color: var(--copper); font-family: var(--font-sans); font-size: 7.5pt; font-weight: 800; padding: 2.5mm 4mm; border-radius: 6px; min-width: 16mm; text-align: center; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+.day-content h4 { font-size: 13pt; margin-bottom: 3mm; }
+.day-content p  { font-size: 11pt; color: var(--text-mid); line-height: 1.7; margin: 0; }
+
+/* ── SIGNAL ROWS ── */
+.sig-row { display: flex; gap: 4.5mm; padding: 3.5mm 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+.sig-row:last-child { border-bottom: none; }
+.sig-dot   { width: 8px; height: 8px; min-width: 8px; border-radius: 50%; margin-top: 4px; }
+.dot-copper { background: var(--copper); }
+.dot-red    { background: #C0392B; }
+.sig-text h4 { font-size: 13pt; margin-bottom: 2mm; }
+.sig-text p  { font-size: 11pt; color: var(--text-mid); line-height: 1.7; margin: 0; }
+
+/* ── TITLE EXAMPLES ── */
+.title-ex { display: flex; align-items: center; gap: 3mm; padding: 3mm 4.5mm; border-radius: 6px; margin: 2mm 0; font-size: 10.5pt; }
+.title-ex.weak   { background: #FDECEA; border: 1px solid #F5C6C0; color: #7B1E1E; }
+.title-ex.better { background: var(--copper-light); border: 1px solid var(--copper-mid); color: #5C2E00; font-weight: 600; }
+.ex-tag { font-size: 7pt; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+.ex-tag.weak   { background: #F1A8A0; color: #6B1111; }
+.ex-tag.better { background: var(--copper); color: white; }
+
+/* ── CHECKLIST ── */
+.checklist    { list-style: none; padding: 0; margin: 4mm 0; }
+.checklist li { display: flex; align-items: flex-start; gap: 4.5mm; padding: 3.5mm 0; border-bottom: 1px solid var(--border-light); font-size: 11pt; color: var(--text); line-height: 1.65; }
+.checklist li:last-child { border-bottom: none; }
+.check-sq     { width: 5mm; height: 5mm; min-width: 5mm; border: 2px solid var(--copper); border-radius: 3px; margin-top: 1mm; background: var(--paper-2); }
+
+/* ── CHIPS ── */
+.chip        { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 7.5pt; font-weight: 700; white-space: nowrap; }
+.chip-copper { background: var(--copper); color: white; }
+.chip-dark   { background: var(--espresso); color: var(--warm-white); }
+.chip-sand   { background: var(--paper-3); color: var(--text-mid); border: 1px solid var(--border); }
+.chip-red    { background: #C0392B; color: white; }
+
+/* ── TERM ROWS (definitions) ── */
+.term-row    { display: flex; gap: 4mm; padding: 3mm 0; border-bottom: 1px solid var(--border-light); align-items: baseline; }
+.term-row:last-child { border-bottom: none; }
+.term-name   { font-size: 11pt; font-weight: 800; color: var(--espresso); min-width: 90px; }
+.term-def    { font-size: 11pt; color: var(--text-mid); line-height: 1.65; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+  .s, .chap { padding: 40px 28px; }
+  .cover-body, .cover-top, .cover-img, .cover-ft { padding-left: 28px; padding-right: 28px; }
+  .cover-img { margin: 0 28px 0; }
+  h2 { font-size: 18pt; }
+  .chap-title { font-size: 18pt; }
+  .cover-title { font-size: 36pt; }
+  .two-col { grid-template-columns: 1fr; }
+  .stat-row { flex-direction: column; }
+  .chap-ghost { display: none; }
+}
+</style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div class="book">
+
+
+<!-- ═══════════════════════════════════════════ COVER ═══ -->
+<div class="s cover">
+  <div class="cover-band"></div>
+  <div class="cover-top">
+    <span class="cover-logo">Upwork Visibility Research</span>
+    <span class="cover-yr">May 2026</span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eye">Buyer-Side Playbook</div>
+    <div class="cover-title">Get Seen on<br><em>Upwork</em><br>in 2026</div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Why most proposals get zero views, and how to rank in the top results for every relevant job you apply to. Based on 50 real job postings studied from the buyer side.</div>
+    <div class="cover-author">By Ahmad Zabir &nbsp;|&nbsp; Buyer-Side Research &nbsp;|&nbsp; May 2026</div>
+  </div>
+  <div class="cover-img">
+    <img src="Pics/Page 1 Screenshot.png" alt="Upwork buyer-side proposal view" style="width:100%;display:block;">
+  </div>
+  <div class="cover-ft">
+    <span style="font-size:7.5pt;color:rgba(255,255,255,0.22);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;">Not affiliated with Upwork Inc.</span>
+    <span class="cover-tag">Research-Backed</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ CHAPTER 1 ═══ -->
+<div class="chap">
+  <div class="chap-ghost">1</div>
+  <div class="chap-rule"></div>
+  <div class="chap-label">Chapter One</div>
+  <div class="chap-title">Upwork Changed... A LOT. And We Uncovered How You Can Still Crack It</div>
+  <div class="chap-desc">This is not a repeat of the tips you've seen everywhere. This is 50 real jobs, 3,147 proposals, and $500+ in research... studied from the buyer side so you don't have to.</div>
+</div>
+
+<div class="s">
+  <span class="sec-label">The Research</span>
+  <p>In 2026, Upwork is not the same platform most freelancers learned on. A new AI layer called Uma now filters, scores, and summarises every proposal before a buyer ever sees it. Most freelancers are still using 2022 strategies on a 2026 platform... wondering why nothing is working.</p>
+  <p>We wanted real answers. So we posted 50 real jobs on the buyer side, spent $500+ in Claude Code research credits, and reviewed every single proposal that came in, 3,147 in total. We tracked who ranked where, who got buried in the hidden Other bucket, and what actually separated the visible profiles from the invisible ones.</p>
+  <div class="stat-row" style="margin:6mm 0;">
+    <div class="stat-box">
+      <div class="stat-num">50</div>
+      <div class="stat-lbl">Real jobs posted and studied from the buyer side</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">3,147</div>
+      <div class="stat-lbl">Total proposals analyzed, ranked, and profiled</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num">$500+</div>
+      <div class="stat-lbl">In Claude Code research credits spent so you don't have to</div>
+    </div>
+  </div>
+  <div class="screenshot-block">
+    <img src="Pics/2.png" alt="Upwork buyer-side proposal review page">
+    <div class="img-caption"><strong>What buyers actually see.</strong> The proposal review page: highlighted skills, Uma-generated summaries, and cover letter previews side by side. Notice how the profile data appears before a single word of the cover letter.</div>
+  </div>
+  <div class="callout-dark" style="margin-top:6mm;">
+    <div class="callout-label">What you'll walk away with</div>
+    <p>By the end of this book: you'll know exactly how the algorithm classifies your profile, what signals it uses to rank you, and what a page-one profile looks like, with a step-by-step rebuild plan to get there.</p>
+  </div>
+</div>
+
+
+<div class="chap-sep"></div>
+
+<!-- ═══════════════════════════════════════════ CHAPTER 2 ═══ -->
+<div class="chap">
+  <div class="chap-ghost">2</div>
+  <div class="chap-rule"></div>
+  <div class="chap-label">Chapter Two</div>
+  <div class="chap-title">What Changed Exactly in Upwork</div>
+  <div class="chap-desc">Before you touch your profile or proposals, understand what you're actually dealing with. The platform shifted significantly in 2025-2026. This chapter covers everything that's different. Fast.</div>
+</div>
+
+<!-- 2A: BUYER PSYCHOLOGY -->
+<div class="s">
+  <span class="sec-label">The Buyer's Reality</span>
+  <h2>First, Understand How the Buyer Actually Thinks</h2>
+  <p>Most freelancers imagine a buyer patiently reading every proposal. That is not what happens. A buyer posts a job, gets flooded with proposals within hours, and starts feeling overwhelmed, not lucky. By the time they open the proposal list, they're already looking for a reason to <em>stop</em> reading, not a reason to keep going.</p>
+  <div class="two-col" style="margin:5mm 0;">
+    <div style="background:var(--paper-3);border-radius:8px;padding:5mm;border:1px solid var(--border);">
+      <div style="font-size:7.5pt;font-weight:800;color:var(--text-light);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:3mm;">Old Upwork (Pre-2025)</div>
+      <ul class="doc-list" style="margin:0;">
+        <li>Buyer writes the job post manually</li>
+        <li>Buyer reads proposals top to bottom</li>
+        <li>Best cover letter usually won</li>
+        <li>Reputation and reviews dominated</li>
+      </ul>
+    </div>
+    <div style="background:var(--copper-light);border-radius:8px;padding:5mm;border:1px solid var(--copper-mid);">
+      <div style="font-size:7.5pt;font-weight:800;color:var(--copper);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:3mm;">New Upwork (2026)</div>
+      <ul class="doc-list" style="margin:0;">
+        <li>Uma drafts the job post in seconds from 1-2 sentences</li>
+        <li>Uma sorts, scores, and hides proposals automatically</li>
+        <li>Buyer is pushed straight to an Invite Freelancers flow</li>
+        <li>Profile relevance now dominates over cover letters</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="callout-label">The Invite Trap</div>
+    <p>Immediately after posting, the buyer is nudged to invite specific freelancers. Many hire directly from that invite pool, <strong>without ever opening the proposal list.</strong> Visibility in search is now a completely separate game from proposal ranking.</p>
+  </div>
+  <div class="callout-dark" style="margin-top:4mm;">
+    <div class="callout-label">The one insight that explains every algorithm feature</div>
+    <p>Upwork is not just ranking freelancers. It is <strong>defending the buyer's attention.</strong> The Other bucket, Best Match tier, Uma summaries, auto-hide filter... all of it is Upwork protecting the buyer's time. Once you understand that, every part of the system makes sense.</p>
+  </div>
+</div>
+
+<!-- 2B: HIDDEN FOLDER -->
+<div class="s alt">
+  <span class="sec-label">The Hidden Bucket</span>
+  <h2>There's a New "Hidden" Folder Where Your Proposals Go</h2>
+  <p>If your proposal isn't getting views, it may be sitting in a section called <strong>Other Proposals</strong>, a hidden bucket the buyer has to actively seek out. Upwork won't tell you. There's no notification, no warning. Your proposal just disappears.</p>
+  <div style="margin:5mm 0;">
+    <div class="day-row">
+      <div class="day-badge">Step 1</div>
+      <div class="day-content"><h4>Buyer opens the proposal page</h4><p>They see Boosted slots (up to 4), then Best Match candidates, then the full visible organic list, sometimes 40-60 freelancers deep.</p></div>
+    </div>
+    <div class="day-row">
+      <div class="day-badge">Step 2</div>
+      <div class="day-content"><h4>Buyer scrolls through all visible proposals</h4><p>Most buyers scan only the first 10-20. The further down, the less likely anyone reads it.</p></div>
+    </div>
+    <div class="day-row">
+      <div class="day-badge">Step 3</div>
+      <div class="day-content"><h4>At the very bottom: a small "View more results" link</h4><p>Easy to miss. Nothing about it signals importance. Most buyers never reach it.</p></div>
+    </div>
+    <div class="day-row">
+      <div class="day-badge">Step 4</div>
+      <div class="day-content"><h4>Click it → the Other bucket opens</h4><p>Only now do hidden proposals appear. By this point, most buyers have already messaged or shortlisted someone from the visible list.</p></div>
+    </div>
+  </div>
+  <div class="screenshot-block">
+    <img src="Pics/3.png" alt="Upwork Other Proposals bucket">
+    <div class="img-caption"><strong>The Other bucket exposed.</strong> Real proposals from our research that Upwork hid from buyers, despite strong qualifications, badges, and relevant skills visible even in the collapsed view.</div>
+  </div>
+  <div class="callout-dark" style="margin-top:5mm;">
+    <div class="callout-label">How many buyers actually open it</div>
+    <p>In our research, <strong>fewer than 1 in 10 buyers ever opened the Other bucket.</strong> Of those who did, most opened only a handful of profiles. Being in Other is not the same as ranking low. It is closer to not applying at all.</p>
+  </div>
+</div>
+
+<!-- 2C: UMA AI FILTER -->
+<div class="s">
+  <span class="sec-label">The AI Filter</span>
+  <h2>An AI Is Reading Your Profile Before Any Human Does</h2>
+  <p>Uma, Upwork's AI, generates a work history summary and highlights the skills it considers most relevant to the job, before the buyer opens your profile. What Uma highlights is what the buyer sees first. If your key skills aren't highlighted, you're invisible before anyone reads a word you wrote.</p>
+  <div class="screenshot-block" style="margin-bottom:5mm;">
+    <img src="Pics/Uma Summary of a Random Profile with 2 Highlighted Skills.png" alt="Uma-generated work history summary">
+    <div class="img-caption"><strong>Uma in action.</strong> The green-highlighted skills (Python, Artificial Intelligence) are what Uma matched to the job. Every other skill is present but not highlighted... the buyer's attention goes to the green chips first.</div>
+  </div>
+  <h3 style="margin-top:0;">Five terms to know</h3>
+  <div class="term-row"><span class="term-name"><span class="chip chip-dark">Boosted</span></span><span class="term-def">Paid placement. Shown first. Up to 4 slots. A separate auction.</span></div>
+  <div class="term-row"><span class="term-name"><span class="chip chip-copper">Best Match</span></span><span class="term-def">Upwork's top algorithmic picks after boosts. Typically 3-5 profiles. No agencies here in our data.</span></div>
+  <div class="term-row"><span class="term-name"><span class="chip chip-sand">Organic</span></span><span class="term-def">The normal visible list. Still seen, ranked lower. Where most competition happens.</span></div>
+  <div class="term-row"><span class="term-name"><span class="chip chip-red">Other</span></span><span class="term-def">The hidden bucket. Buyer must scroll to bottom + click a link to see these. Most never do.</span></div>
+  <div class="term-row"><span class="term-name" style="font-size:8.5pt;font-weight:800;color:var(--espresso);min-width:90px;">Uma Summary</span><span class="term-def">AI-written paragraph about your Upwork history. Shown on your proposal card before the buyer opens your profile.</span></div>
+</div>
+
+<!-- 2D: BADGE SHOCK -->
+<div class="s sand">
+  <span class="sec-label">The Shocking Data</span>
+  <h2>95% of Hidden Profiles Already Had a Badge</h2>
+  <p>The Other bucket is not where bad freelancers end up. We looked at every hidden profile across all 50 jobs. What we found was uncomfortable.</p>
+  <div class="stat-row" style="margin:5mm 0;">
+    <div class="stat-box">
+      <div class="big-stat">~95%</div>
+      <div class="stat-lbl">of hidden profiles had a major Upwork badge (Top Rated, Top Rated Plus, or Rising Talent)</div>
+    </div>
+    <div class="stat-box">
+      <div class="big-stat">~55%</div>
+      <div class="stat-lbl">were Top Rated Plus, Upwork's highest tier. Still hidden. Still invisible to the buyer.</div>
+    </div>
+  </div>
+  <table class="doc-table">
+    <thead><tr><th>Badge Level</th><th style="width:28mm;text-align:center;">Found in Other Bucket</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip chip-copper">Top Rated Plus</span></td><td style="text-align:center;font-weight:800;">~55%</td></tr>
+      <tr><td><span class="chip chip-dark">Top Rated</span></td><td style="text-align:center;font-weight:800;">~30%</td></tr>
+      <tr><td><span class="chip chip-sand">Rising Talent</span></td><td style="text-align:center;font-weight:800;">~10%</td></tr>
+      <tr><td><span class="chip chip-red">No Badge</span></td><td style="text-align:center;font-weight:800;">~5%</td></tr>
+    </tbody>
+  </table>
+  <div class="callout-dark" style="margin-top:5mm;">
+    <div class="callout-label">The real question the algorithm asks</div>
+    <p>Not <em>"Is this person good?"</em>... but <em>"Is this person the <strong>right kind of good</strong> for this exact job?"</em> A Top Rated Plus profile applying to the wrong category loses to a Rising Talent profile with clean, specific alignment every single time.</p>
+  </div>
+</div>
+
+<!-- 2E: COVER LETTER MYTH -->
+<div class="s alt">
+  <span class="sec-label">The Cover Letter Myth</span>
+  <h2>The Best Cover Letter on a Mismatched Profile? Still Invisible.</h2>
+  <div style="display:flex;align-items:baseline;gap:4mm;margin-bottom:4mm;">
+    <div style="font-family:var(--font-sans);font-size:28pt;font-weight:900;color:var(--copper);line-height:1;">~40%</div>
+    <div style="font-size:10pt;color:var(--text-mid);line-height:1.6;max-width:480px;">of proposals in the Other bucket had cover letters that were objectively stronger, more specific, more technical, more relevant-sounding, than proposals in the visible list.</div>
+  </div>
+  <p>On one WordPress development job we reviewed, the strongest cover letter in the entire Other bucket named WooCommerce, PHP custom checkout, and performance optimization by name. More detailed than anything in the visible list. But the profile behind it had a broad title, unfocused skills, and no clear WordPress work history. The system read the profile first. Profile failed the gate. Cover letter never got a fair chance.</p>
+  <div class="two-col" style="margin:5mm 0;">
+    <div style="background:var(--copper-light);border-radius:8px;padding:5mm;border:1px solid var(--copper-mid);">
+      <div style="font-size:7.5pt;font-weight:800;color:var(--copper);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:3mm;">✓ Visible Proposal</div>
+      <p style="font-size:9pt;margin:0;color:var(--text);line-height:1.65;">Average cover letter. But title, skills, and past jobs all pointed to the right category. System had high confidence. Passed the gate.</p>
+    </div>
+    <div style="background:#FDF3F2;border-radius:8px;padding:5mm;border:1px solid #F0C8C4;">
+      <div style="font-size:7.5pt;font-weight:800;color:#B03020;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:3mm;">✗ Hidden Proposal (Other)</div>
+      <p style="font-size:9pt;margin:0;color:var(--text);line-height:1.65;">Brilliant cover letter. But broad title, scattered skills, and no relevant work history. Low profile confidence. Went straight to Other.</p>
+    </div>
+  </div>
+  <div class="callout-sand">
+    <div class="callout-label">The order of operations</div>
+    <p>Upwork reads your profile before the buyer reads your cover letter. Fix the profile first. The cover letter is an <strong>amplifier</strong>, not a rescue tool.</p>
+  </div>
+</div>
+
+
+<div class="chap-sep"></div>
+
+<!-- ═══════════════════════════════════════════ CHAPTER 3 ═══ -->
+<div class="chap">
+  <div class="chap-ghost">3</div>
+  <div class="chap-rule"></div>
+  <div class="chap-label">Chapter Three</div>
+  <div class="chap-title">What the Data Says on Ranking Your Proposals on a Job</div>
+  <div class="chap-desc">Our best working model from 50 jobs of buyer-side observation. Not Upwork's source code... but the patterns we saw repeat until they became undeniable. Use this as a diagnostic, not a formula.</div>
+</div>
+
+<!-- 3A: THREE QUESTIONS -->
+<div class="s">
+  <span class="sec-label">The System</span>
+  <h2>Every Proposal Passes Through Three Questions Before Any Human Sees It</h2>
+  <table class="doc-table" style="margin:5mm 0;">
+    <thead><tr><th style="width:6mm;">#</th><th>What the system is deciding</th><th style="width:34mm;">Stage</th></tr></thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:800;color:var(--copper);">1</td>
+        <td>Does this freelancer <strong>belong on this job at all?</strong></td>
+        <td><span class="chip chip-dark">Visibility Gate</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:800;color:var(--copper);">2</td>
+        <td>Among those who passed, <strong>who ranks highest</strong> on page one?</td>
+        <td><span class="chip chip-copper">Ranking</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight:800;color:var(--copper);">3</td>
+        <td>When the buyer opens the profile, does it feel <strong>safe to hire?</strong></td>
+        <td><span class="chip chip-sand">Trust Floor</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="callout" style="margin-bottom:5mm;">
+    <div class="callout-label">Most freelancers get this backwards</div>
+    <p>All the energy goes into Stage 3: reviews, earnings, portfolio presentation. But the system eliminates most profiles at Stage 1 before the buyer is ever involved. Fix Stage 1 first.</p>
+  </div>
+  <h3>Where Does Your Score Put You?</h3>
+  <table class="doc-table">
+    <thead><tr><th>Net Score (after caps and penalties)</th><th>Where you likely land</th></tr></thead>
+    <tbody>
+      <tr><td><span class="score-pos">88-100</span></td><td><strong>Strong Best Match candidate</strong></td></tr>
+      <tr><td><span class="score-pos">80-87</span></td><td>Best Match eligible / top of Organic</td></tr>
+      <tr><td style="font-weight:700;">68-79</td><td>First-page Organic. Reliably visible.</td></tr>
+      <tr><td style="font-weight:700;">55-67</td><td>Visible but fragile. One contradiction can cost you.</td></tr>
+      <tr><td style="font-weight:700;">40-54</td><td>Other border. Inconsistent visibility.</td></tr>
+      <tr><td><span class="score-neg">Under 40</span></td><td><strong>Other likely.</strong> Profile classification is broken.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 3B: SCORING CLUSTERS -->
+<div class="s alt">
+  <span class="sec-label">The Scoring Model</span>
+  <h2>Your Visibility Score Is Built From Three Signal Clusters: Here's the Full Breakdown</h2>
+  <p>Every signal either helps you, does nothing, or hurts you. The tables below show the maximum positive contribution from each signal when fully matched. A mismatch earns zero or becomes a penalty.</p>
+
+  <h3>Cluster 1: Profile Identity Signals <span style="float:right;font-size:11pt;font-weight:900;color:var(--copper);">max +36 pts</span></h3>
+  <table class="doc-table">
+    <thead><tr><th>Signal</th><th style="width:24mm;text-align:right;">Max Points</th></tr></thead>
+    <tbody>
+      <tr><td>Exact job-keyword in profile title</td><td style="text-align:right;"><span class="score-pos">+7</span></td></tr>
+      <tr><td>Exact tool or problem keyword in title</td><td style="text-align:right;"><span class="score-pos">+5</span></td></tr>
+      <tr><td>No conflicting identity in title</td><td style="text-align:right;"><span class="score-pos">+5</span></td></tr>
+      <tr><td>Main skills include the job's tags</td><td style="text-align:right;"><span class="score-pos">+8</span></td></tr>
+      <tr><td>Focused skill stack (not scattered)</td><td style="text-align:right;"><span class="score-pos">+4</span></td></tr>
+      <tr><td>AI-highlighted relevant skills match the job</td><td style="text-align:right;"><span class="score-pos">+7</span></td></tr>
+      <tr class="score-total-row"><td><strong>Cluster Maximum</strong></td><td style="text-align:right;"><span class="score-pos">+36</span></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Cluster 2: Proof Layer Signals <span style="float:right;font-size:11pt;font-weight:900;color:var(--copper);">max +43 pts</span></h3>
+  <table class="doc-table">
+    <thead><tr><th>Signal</th><th style="width:24mm;text-align:right;">Max Points</th></tr></thead>
+    <tbody>
+      <tr><td>Most Relevant Jobs surfaced by Upwork for this posting</td><td style="text-align:right;"><span class="score-pos">+9</span></td></tr>
+      <tr><td>Highlighted skill chips inside those relevant jobs</td><td style="text-align:right;"><span class="score-pos">+8</span></td></tr>
+      <tr><td>Past job semantic similarity to the job post</td><td style="text-align:right;"><span class="score-pos">+7</span></td></tr>
+      <tr><td>Proposal-selected highlights directly relevant</td><td style="text-align:right;"><span class="score-pos">+7</span></td></tr>
+      <tr><td>Relevant portfolio projects exist</td><td style="text-align:right;"><span class="score-pos">+6</span></td></tr>
+      <tr><td>Portfolio tags highlighted as relevant to the job</td><td style="text-align:right;"><span class="score-pos">+6</span></td></tr>
+      <tr class="score-total-row"><td><strong>Cluster Maximum</strong></td><td style="text-align:right;"><span class="score-pos">+43</span></td></tr>
+    </tbody>
+  </table>
+  <div class="callout" style="margin-bottom:5mm;">
+    <div class="callout-label">The most ignored surface in the entire model</div>
+    <p>Most Relevant Jobs (+9) and highlighted skill chips inside them (+8) are the highest-weight signals in the model. Most freelancers have never checked which jobs Upwork is surfacing for them, or what skill tags appear inside those jobs. This is the biggest gap between what matters and what people actually do.</p>
+  </div>
+
+  <h3>Cluster 3: Proposal, Trust + Penalties <span style="float:right;font-size:11pt;font-weight:900;color:var(--copper);">max +23 pts</span></h3>
+  <table class="doc-table">
+    <thead><tr><th>Signal</th><th style="width:24mm;text-align:right;">Max Points</th></tr></thead>
+    <tbody>
+      <tr><td>Uma work history summary matches the job</td><td style="text-align:right;"><span class="score-pos">+5</span></td></tr>
+      <tr><td>Cover letter first screen matches job vocabulary</td><td style="text-align:right;"><span class="score-pos">+5</span></td></tr>
+      <tr><td>Cover letter has specific implementation detail</td><td style="text-align:right;"><span class="score-pos">+5</span></td></tr>
+      <tr><td>Trust floor acceptable (JSS, major badge)</td><td style="text-align:right;"><span class="score-pos">+3</span></td></tr>
+      <tr><td>Response time and recent activity</td><td style="text-align:right;"><span class="score-pos">+2</span></td></tr>
+      <tr><td>Rising Talent lift (newer profiles)</td><td style="text-align:right;"><span class="score-pos">+2</span></td></tr>
+      <tr><td>Rate and buyer-fit reasonable for budget</td><td style="text-align:right;"><span class="score-pos">+1</span></td></tr>
+      <tr class="score-total-row"><td><strong>Cluster Maximum</strong></td><td style="text-align:right;"><span class="score-pos">+23</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="divider-label"><span>Penalty Layer</span></div>
+  <table class="doc-table">
+    <thead><tr><th>Penalty Trigger</th><th style="width:32mm;text-align:right;">Score Range</th></tr></thead>
+    <tbody>
+      <tr><td>Off-category title or skill stack vs. the job</td><td style="text-align:right;"><span class="score-neg">−12 to −25</span></td></tr>
+      <tr><td>Agency or company framing on individual-contractor job</td><td style="text-align:right;"><span class="score-neg">−8 to −18</span></td></tr>
+      <tr><td>No buyer-visible proof matching the category</td><td style="text-align:right;"><span class="score-neg">−8 to −15</span></td></tr>
+      <tr><td>Profile and proposal tell contradicting stories</td><td style="text-align:right;"><span class="score-neg">−7 to −15</span></td></tr>
+      <tr><td>Template or keyword-stuffed proposal</td><td style="text-align:right;"><span class="score-neg">−3 to −10</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 3C: SCORE CAPS -->
+<div class="s">
+  <span class="sec-label">What Limits Your Score</span>
+  <h2>Seven Conditions That Put a Hard Ceiling on Your Score, Even if Everything Else Looks Good</h2>
+  <p>Even a strong raw score can be limited by a <strong>cap condition</strong>, something critical that's missing or contradicting. Caps prevent over-ranking a profile that only matches part of what a job needs.</p>
+  <table class="doc-table" style="margin:5mm 0;">
+    <thead><tr><th>Condition</th><th style="width:30mm;text-align:right;">Score Ceiling</th></tr></thead>
+    <tbody>
+      <tr><td>One major job-category cluster missing</td><td style="text-align:right;font-weight:700;">74 max</td></tr>
+      <tr><td>Two major clusters missing</td><td style="text-align:right;font-weight:700;">55 max</td></tr>
+      <tr><td>Exact title but weak or absent proof layer</td><td style="text-align:right;font-weight:700;">60-68 max</td></tr>
+      <tr><td>Strong cover letter but mismatched profile</td><td style="text-align:right;font-weight:700;">55-65 max</td></tr>
+      <tr><td>Off-category profile identity</td><td style="text-align:right;font-weight:700;">45-55 max</td></tr>
+      <tr><td>Agency or team profile on a direct-builder job</td><td style="text-align:right;font-weight:700;">60 max</td></tr>
+      <tr><td>No buyer-visible proof for the category</td><td style="text-align:right;font-weight:700;">58 max</td></tr>
+    </tbody>
+  </table>
+  <div class="callout-dark">
+    <div class="callout-label">How to use this as a diagnostic</div>
+    <p>Run the three scoring clusters honestly for your profile against a specific job. Add up the max you can claim. Then check for caps. Your real ceiling is almost always lower than the raw total... because most profiles have at least one missing cluster or one contradiction working against them. <strong>Find your cap first. That is where to focus.</strong></p>
+  </div>
+</div>
+
+<!-- 3D: FOUR CASES -->
+<div class="s alt">
+  <span class="sec-label">Real Examples</span>
+  <h2>Four Cases From Our Data That Explain How the Algorithm Thinks</h2>
+  <p>These anomalies are the most useful part of the research. We built the model by asking: what would have to be true for these weird rankings to make sense?</p>
+  <div style="margin-top:5mm;">
+    <div class="disc-card">
+      <div class="disc-num">01</div>
+      <div class="disc-content">
+        <h4>A Top Rated Plus profile lands in Other</h4>
+        <p><strong>What we learned:</strong> Reputation is not the first gate. Something in the relevance classification was broken. The badge did not save it.</p>
+      </div>
+    </div>
+    <div class="disc-card">
+      <div class="disc-num">02</div>
+      <div class="disc-content">
+        <h4>A Rising Talent profile ranks near the top of Best Match</h4>
+        <p><strong>What we learned:</strong> Strong relevance beats weak history. Clean narrow identity, one directly relevant past job, portfolio tags that matched the job exactly.</p>
+      </div>
+    </div>
+    <div class="disc-card">
+      <div class="disc-num">03</div>
+      <div class="disc-content">
+        <h4>A $200K+ earner ranks lower than a niche specialist with a fraction of their earnings</h4>
+        <p><strong>What we learned:</strong> Broad authority loses to narrow fit. Every time.</p>
+      </div>
+    </div>
+    <div class="disc-card">
+      <div class="disc-num">04</div>
+      <div class="disc-content">
+        <h4>An exact-title profile is still pushed to Other</h4>
+        <p><strong>What we learned:</strong> Title alone is not enough. The title matched but the skills, portfolio, and highlights did not back it up. Repeated proof matters more than one keyword.</p>
+      </div>
+    </div>
+  </div>
+  <div class="screenshot-block" style="margin-top:5mm;">
+    <img src="Pics/Random Profile Screenshot Where 4 Relevant Jobs are being shown with highlighted skills.png" alt="Most Relevant Jobs with highlighted skill chips">
+    <div class="img-caption"><strong>Most Relevant Jobs: the strongest proof surface.</strong> Upwork surfaces jobs matched to the posting and highlights skill tags inside each one. This is the ranking surface most freelancers completely ignore.</div>
+  </div>
+</div>
+
+
+<div class="chap-sep"></div>
+
+<!-- ═══════════════════════════════════════════ CHAPTER 4 ═══ -->
+<div class="chap">
+  <div class="chap-ghost">4</div>
+  <div class="chap-rule"></div>
+  <div class="chap-label">Chapter Four</div>
+  <div class="chap-title">How to Fix Your Profile and Rank on Page One</div>
+  <div class="chap-desc">Nine rules, a pre-application checklist, and a 7-day rebuild sequence. The order matters... fix profile classification first, then increase proposal volume.</div>
+</div>
+
+<!-- 4A: NINE RULES -->
+<div class="s">
+  <span class="sec-label">The Nine Rules</span>
+  <h2>Nine Rules for Page-One Visibility: Built Directly From the Data</h2>
+  <div style="margin-top:4mm;">
+    <div class="rule-row">
+      <div class="rule-num">01</div>
+      <div class="rule-content"><h4>Stop being broadly impressive. Be obviously right for one job.</h4><p>Use this formula: Role + Exact Niche + Core Tools + Buyer Outcome. A broad title is always weaker than a narrow one that matches the buyer's exact need.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">02</div>
+      <div class="rule-content"><h4>Make the first profile line mirror the buyer's problem, not your biography</h4><p>Not "I am passionate about development." What specific problem do you solve? That is what the first line should answer.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">03</div>
+      <div class="rule-content"><h4>Organise your skills like ranking signals, not a resume dump</h4><p>Top skills should use exact vocabulary from the jobs you want to rank for. Remove anything that pulls you into the wrong category.</p></div>
+    </div>
+  </div>
+  <div style="margin: 3mm 0 5mm 14mm;">
+    <div class="title-ex weak"><span class="ex-tag weak">Weak</span> Full Stack Developer</div>
+    <div class="title-ex better"><span class="ex-tag better">Strong</span> WordPress Developer | WooCommerce, PHP, Custom Plugins | AI Integrations</div>
+    <div class="title-ex better"><span class="ex-tag better">Strong</span> AI Engineer | RAG Memory, LangGraph, Neo4j | Python</div>
+  </div>
+  <div class="screenshot-block" style="margin-bottom:5mm;">
+    <img src="Pics/Screenshot of the Overall Skills Section with highlighted skills .png" alt="Skills section with highlighted chip">
+    <div class="img-caption"><strong>Skills as ranking signals.</strong> The green-highlighted chip (WordPress) is what Uma matched to the job. Your top skills should make as many chips go green as possible for your target category.</div>
+  </div>
+  <div style="margin-top:2mm;">
+    <div class="rule-row">
+      <div class="rule-num">04</div>
+      <div class="rule-content"><h4>Build portfolio items for ranking, not just presentation</h4><p>Title, description, and tags should use the same vocabulary as target job posts. Vague portfolio titles ("AI Project") score near zero. Specific ones score high.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">05</div>
+      <div class="rule-content"><h4>Treat past jobs as evidence clusters, pick the right ones to highlight</h4><p>You can't rewrite past job descriptions. But you can choose which jobs to select as proposal highlights. Always pick the most relevant job, not your highest-earning one.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">06</div>
+      <div class="rule-content"><h4>Write cover letters after the profile is already aligned, not before</h4><p>A cover letter that contradicts your profile signals confusion, not confidence. Write it after the profile already looks relevant.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">07</div>
+      <div class="rule-content"><h4>Use trust signals as support, not as the whole strategy</h4><p>JSS, Top Rated, and earnings are tie-breakers after relevance. Relevance always comes first.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">08</div>
+      <div class="rule-content"><h4>Apply early, but fast and generic is still generic</h4><p>First 20 minutes can matter in competitive categories. The winning move is fast <em>plus</em> relevant, not fast alone.</p></div>
+    </div>
+    <div class="rule-row">
+      <div class="rule-num">09</div>
+      <div class="rule-content"><h4>Agencies and software houses need sharper entry points per service, not a single "we do everything" profile</h4><p>Agency profiles often lose because the founder profile is too broad. The fix is sharper category-specific positioning, not a longer list of services.</p></div>
+    </div>
+  </div>
+  <div class="callout-dark" style="margin-top:5mm;">
+    <div class="callout-label">A note for Pakistani freelancers and agencies</div>
+    <p>Most Pakistani freelancers are excellent at delivery but weak at packaging. Three common mistakes: <strong>(1)</strong> Broad title: "Full Stack Developer" or "Software House" tells Uma nothing specific. <strong>(2)</strong> Pricing panic: lowering the rate when views drop doesn't fix a relevance mismatch. <strong>(3)</strong> Polished AI English, smooth generic prose beats simple English with exact nouns and a practical plan. Every time.</p>
+  </div>
+</div>
+
+<!-- 4B: CHECKLIST + 7-DAY PLAN -->
+<div class="s alt">
+  <span class="sec-label">The Action Plan</span>
+  <h2>Your Pre-Application Checklist + 7-Day Rebuild Plan</h2>
+  <p>Run this checklist before every application. If any item is not true, you may still apply, but don't blame the algorithm when you disappear.</p>
+  <ul class="checklist" style="margin-top:4mm;">
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My title contains the exact job niche</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Not a broad role. The specific service the buyer is buying.</span></div>
+    </li>
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My first profile line mirrors the buyer's problem</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Not "I am passionate about..."... the specific problem this job posts to solve.</span></div>
+    </li>
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My top skills match this job post's exact vocabulary</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Exact keywords from the job appear in your top 3-5 skills.</span></div>
+    </li>
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My portfolio has at least one project matching this job</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Title, description, and tags use the same vocabulary as the job post.</span></div>
+    </li>
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My selected highlight is my most relevant job, not my biggest one</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Relevance to this specific job. Not total earnings or most impressive name.</span></div>
+    </li>
+    <li>
+      <div class="check-sq"></div>
+      <div><strong>My cover letter names the exact stack and explains a practical first step</strong><br><span style="font-size:8.5pt;color:var(--text-light);">Exact tools, one relevant example, first implementation steps, all screening questions answered.</span></div>
+    </li>
+  </ul>
+  <div class="screenshot-block" style="margin:5mm 0;">
+    <img src="Pics/Screenshot of Relevant Projects Sections with Highlighted tag related to the job .png" alt="Relevant Projects tab with highlighted portfolio tags">
+    <div class="img-caption"><strong>Portfolio as proof, not decoration.</strong> The Relevant Projects tab shows only items Upwork considers matched to the job. The skill tags (WordPress, Elementor, WordPress Theme) triggered the match. Items without the right tags don't appear here, no matter how impressive they look.</div>
+  </div>
+
+  <div class="divider-label"><span>The 7-Day Rebuild Sequence</span></div>
+  <p style="margin-bottom:5mm;">Fix profile classification (Days 1-5) before increasing proposal volume (Days 6-7). Sending more proposals on a misclassified profile just wastes connects faster.</p>
+  <div class="day-row">
+    <div class="day-badge">Day 1</div>
+    <div class="day-content"><h4>Audit your title and first line against 3-5 target jobs</h4><p>Does your title use their exact niche keyword? Rewrite both if not.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 2</div>
+    <div class="day-content"><h4>Rebuild your skills list</h4><p>Remove skills that pull you into the wrong category. Add exact keywords from target job posts. Most relevant skills at the top.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 3</div>
+    <div class="day-content"><h4>Retitle and retag your top 3-5 portfolio items</h4><p>Vague titles become specific keyword-rich titles. Tags use exact vocabulary from target jobs.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 4</div>
+    <div class="day-content"><h4>Identify your most relevant past Upwork jobs</h4><p>Pick 2-3 completed jobs closest to your target category. Ensure skill tags are accurate. Set up as proposal highlights.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 5</div>
+    <div class="day-content"><h4>Rewrite your profile overview opening paragraph</h4><p>Replace biography or generic intro with a problem-first opening. Use exact terminology. Name the type of client and the specific outcome you deliver.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 6</div>
+    <div class="day-content"><h4>Apply to 3-5 targeted jobs using the checklist above</h4><p>This is a test batch. You are measuring whether the profile changes are working, not going for volume yet.</p></div>
+  </div>
+  <div class="day-row">
+    <div class="day-badge">Day 7</div>
+    <div class="day-content"><h4>Review results and decide what to adjust</h4><p>Check proposal views across the batch. Use the pattern below to diagnose.</p></div>
+  </div>
+
+  <div class="divider-label" style="margin-top:6mm;"><span>How to Know If It Worked</span></div>
+  <div class="disc-card">
+    <div class="disc-num" style="font-size:13pt;">A</div>
+    <div class="disc-content">
+      <h4>Views improved but replies stayed weak</h4>
+      <p>The visibility gate improved. You're being seen now. The problem has shifted to offer and proposal quality: rate, cover letter, or proof may need work.</p>
+    </div>
+  </div>
+  <div class="disc-card">
+    <div class="disc-num" style="font-size:13pt;color:#C0392B;">B</div>
+    <div class="disc-content">
+      <h4>Views stayed dead</h4>
+      <p>Profile may still be misclassified for these specific jobs. Go back to Day 1 and recheck title and skills against the exact jobs you applied to.</p>
+    </div>
+  </div>
+  <div class="disc-card">
+    <div class="disc-num" style="font-size:13pt;">C</div>
+    <div class="disc-content">
+      <h4>Both views and replies improved</h4>
+      <p>Profile classification and proposal proof are moving in the right direction. Continue in the same category. Let the pattern stabilise over 10-15 applications before changing anything major.</p>
+    </div>
+  </div>
+  <div class="callout-dark" style="margin-top:6mm;">
+    <div class="callout-label">The one thing to remember</div>
+    <p>The freelancers who win page-one visibility are not always the biggest profiles. They are the <strong>clearest</strong> ones. Upwork rewards the profile whose title, skills, history, portfolio, and proposal all tell the same story: <em>"I am exactly the kind of person this job is asking for."</em></p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ SOURCES ═══ -->
+<div class="s sand">
+  <span class="sec-label">References</span>
+  <h2>Sources Checked</h2>
+  <p style="font-size:9pt;color:var(--text-mid);margin-bottom:5mm;">Public Upwork sources used for platform-change context only. The scoring model is based entirely on buyer-side manual research and should be treated as a working model, not an official Upwork formula.</p>
+  <div class="sig-row" style="margin-top:3mm;">
+    <div class="sig-dot dot-copper"></div>
+    <div class="sig-text"><h4>Upwork Updates Spring 2026</h4><p>Uma-powered innovations: work history summaries, Uma Recruiter shortlisting, redesigned marketplace experience.<br><span style="font-size:8pt;color:var(--text-light);">investors.upwork.com/news-releases/…/upwork-updates-spring-2026</span></p></div>
+  </div>
+  <div class="sig-row">
+    <div class="sig-dot dot-copper"></div>
+    <div class="sig-text"><h4>Uma, Upwork's Mindful AI</h4><p>Official Uma product page covering AI-assisted job posting, candidate matching, and work history summaries.<br><span style="font-size:8pt;color:var(--text-light);">upwork.com/uma</span></p></div>
+  </div>
+  <div class="sig-row">
+    <div class="sig-dot dot-copper"></div>
+    <div class="sig-text"><h4>How to Use Uma to Search for Freelancers</h4><p>Buyer-side Uma freelancer search functionality.<br><span style="font-size:8pt;color:var(--text-light);">support.upwork.com/hc/en-us/articles/45809718947859</span></p></div>
+  </div>
+  <div class="sig-row">
+    <div class="sig-dot dot-copper"></div>
+    <div class="sig-text"><h4>Boosted Profile and Boosted Proposal</h4><p>Official documentation for paid placement mechanics.<br><span style="font-size:8pt;color:var(--text-light);">support.upwork.com: Boost your profile / How to boost a proposal</span></p></div>
+  </div>
+  <div class="sig-row">
+    <div class="sig-dot dot-copper"></div>
+    <div class="sig-text"><h4>Upwork Updates Summer 2025</h4><p>75+ AI-driven innovations, Uma powering a majority of new client job posts.<br><span style="font-size:8pt;color:var(--text-light);">investors.upwork.com/news-releases/…/upwork-evolves-uma-ai</span></p></div>
+  </div>
+  <div style="background:var(--paper-2);border-radius:8px;padding:4.5mm;border:1px solid var(--border);margin-top:5mm;">
+    <p style="font-size:8.5pt;color:var(--text-light);margin:0;line-height:1.72;"><strong>Disclaimer:</strong> This playbook is based on independent buyer-side research conducted in April and May 2026. Not affiliated with, endorsed by, or produced in partnership with Upwork Technologies, Inc. All observations represent the researchers' working model. Upwork's algorithms change. Treat this as a map, not a guarantee.</p>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════ CLOSING ═══ -->
+<div class="chap" style="border-bottom:none;">
+  <div class="chap-ghost" style="font-size:140pt;opacity:1;color:rgba(255,255,255,0.02);">✓</div>
+  <div style="font-size:7.5pt;font-weight:800;color:var(--copper);text-transform:uppercase;letter-spacing:0.2em;margin-bottom:7mm;">Key Takeaway</div>
+  <div style="font-family:var(--font-sans);font-size:22pt;font-weight:900;color:var(--warm-white);line-height:1.22;letter-spacing:-0.02em;margin-bottom:8mm;max-width:600px;">The freelancers who win page-one visibility are not always the biggest profiles.<br><span style="color:var(--copper);">They are the clearest ones.</span></div>
+  <div style="width:14mm;height:2px;background:var(--copper);margin-bottom:8mm;border-radius:2px;"></div>
+  <div style="font-size:10pt;color:rgba(251,247,240,0.48);line-height:1.82;max-width:540px;">Upwork rewards the freelancer whose profile, skills, history, portfolio, and proposal all tell the same story: <em>"I am exactly the kind of person this job is asking for."</em></div>
+  <div style="margin-top:48px;font-size:7.5pt;color:rgba(255,255,255,0.2);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;">Buyer-Side Research | May 2026 &nbsp;|&nbsp; Not affiliated with Upwork Inc.</div>
+</div>
+
+
+</div><!-- /book -->
+<script>
+(function(){
+  var bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', function(){
+    var scrolled = window.scrollY;
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
